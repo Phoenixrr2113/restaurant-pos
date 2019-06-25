@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SidePanel from '../components/SidePanel';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 
 import NavBar from '../components/NavBar';
 import ProductList from './ProductList';
@@ -15,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 	content: {
 		flexGrow: 1,
 		backgroundColor: theme.palette.background.default,
-		padding: theme.spacing(3),
+		padding: theme.spacing(1),
 	},
 }));
 

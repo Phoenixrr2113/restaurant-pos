@@ -19,16 +19,28 @@ const useStyles = makeStyles(theme => ({
 	},
 	button_section: {
 		display: 'flex',
-		margin: 15,
-		justifyContent: 'space-between',
+		margin: 0,
+		// justifyContent: 'space-between',
 	},
 	save_button: {
-		width: 120,
+		position: 'absolute',
+		top: 'auto',
+		right: 'auto',
+		left: 0,
+		bottom: 0,
+		height: 70,
+		width: '50%',
 		background: '#4caf50',
 		color: 'white',
 	},
 	confirm_button: {
-		width: 120,
+		position: 'absolute',
+		top: 'auto',
+		right: 0,
+		left: 'auto',
+		bottom: 0,
+		width: '50%',
+		height: 70,
 		color: 'white',
 		background: '#ffa000',
 	},
@@ -40,6 +52,14 @@ const useStyles = makeStyles(theme => ({
 	},
 	title: {
 		padding: theme.spacing(2),
+	},
+	total: {
+		padding: theme.spacing(2),
+		display: 'flex',
+		justifyContent: 'space-between',
+	},
+	prices: {
+		textAlign: 'end',
 	},
 }));
 
@@ -62,6 +82,15 @@ export default function SidePanel() {
 				<OrderSummary />
 			</List>
 			<Divider />
+			<div className={classes.total}>
+				<Typography>Tax</Typography>
+				<Typography className={classes.prices}>$3.00</Typography>
+			</div>
+			<Divider />
+			<div className={classes.total}>
+				<Typography>Total</Typography>
+				<Typography className={classes.prices}>$12.00</Typography>
+			</div>
 			<div className={classes.button_section}>
 				<Button className={classes.save_button} variant='contained'>
 					Save
