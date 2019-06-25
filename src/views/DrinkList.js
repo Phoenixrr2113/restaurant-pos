@@ -9,8 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
 	gridList: {
-		width: 'auto',
-		height: 450,
+		// width: 'auto',
+		// height: 'auto',
 	},
 	icon: {
 		color: 'rgba(255, 255, 255, 0.54)',
@@ -19,8 +19,51 @@ const useStyles = makeStyles(theme => ({
 
 const tileData = [
 	{
-		img: 'image',
-		title: 'Image',
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
+		author: 'author',
+	},
+	{
+		img:
+			'https://res.cloudinary.com/dlrdfp08e/image/upload/v1560956914/seabreeze/d_g-drinks.jpg',
+		title: 'D&G Cola',
 		author: 'author',
 	},
 ];
@@ -28,8 +71,8 @@ const tileData = [
 const DrinkList = () => {
 	const classes = useStyles();
 	return (
-		<GridList cellHeight={180} className={classes.gridList}>
-			<GridListTile key='Subheader' cols={2} style={{ height: 'auto' }}>
+		<GridList cols={3} cellHeight={160} className={classes.gridList}>
+			<GridListTile key='Subheader' cols={3} style={{ height: 'auto' }}>
 				<ListSubheader component='div'>DRINKS</ListSubheader>
 			</GridListTile>
 			{tileData.map(tile => (

@@ -23,7 +23,7 @@ const NavBar = () => {
 		<AppBar position='fixed' className={classes.appBar}>
 			<Toolbar>
 				<Typography variant='h6' noWrap>
-					Permanent drawer
+					Cashier
 				</Typography>
 			</Toolbar>
 		</AppBar>
