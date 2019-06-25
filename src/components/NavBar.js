@@ -5,7 +5,7 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
-const drawerWidth = 240;
+const drawerWidth = 'auto';
 
 const useStyles = makeStyles(theme => ({
 	root: {

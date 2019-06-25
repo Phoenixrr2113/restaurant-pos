@@ -8,7 +8,16 @@ import MailIcon from '@material-ui/icons/Mail';
 const OrderSummary = () => {
 	return (
 		<div>
-			{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+			{[
+				'Rice',
+				'French Fries',
+				'OX-tails',
+				'Cola',
+				'dessert',
+				'sprite',
+				'Rum Cake',
+				'Special',
+			].map((text, index) => (
 				<ListItem button key={text}>
 					<ListItemIcon>
 						{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}

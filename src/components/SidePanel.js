@@ -3,16 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 import OrderSummary from './OrderSummary';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 
-const drawerWidth = 240;
+const drawerWidth = '30%';
 
 const useStyles = makeStyles(theme => ({
 	drawer: {
@@ -22,11 +17,29 @@ const useStyles = makeStyles(theme => ({
 	drawerPaper: {
 		width: drawerWidth,
 	},
+	button_section: {
+		display: 'flex',
+		margin: 15,
+		justifyContent: 'space-between',
+	},
+	save_button: {
+		width: 120,
+		background: '#4caf50',
+		color: 'white',
+	},
+	confirm_button: {
+		width: 120,
+		color: 'white',
+		background: '#ffa000',
+	},
 	toolbar: theme.mixins.toolbar,
 	content: {
 		flexGrow: 1,
 		backgroundColor: theme.palette.background.default,
 		padding: theme.spacing(3),
+	},
+	title: {
+		padding: theme.spacing(2),
 	},
 }));
 
@@ -41,14 +54,22 @@ export default function SidePanel() {
 				paper: classes.drawerPaper,
 			}}
 			anchor='right'>
-			<div className={classes.toolbar} />
+			<div className={classes.toolbar}>
+				<Typography className={classes.title}>Order Summary</Typography>
+			</div>
 			<Divider />
 			<List>
 				<OrderSummary />
 			</List>
 			<Divider />
-			<Button>Save</Button>
-			<Button>Confirm</Button>
+			<div className={classes.button_section}>
+				<Button className={classes.save_button} variant='contained'>
+					Save
+				</Button>
+				<Button className={classes.confirm_button} variant='contained'>
+					Confirm
+				</Button>
+			</div>
 		</Drawer>
 	);
 }
